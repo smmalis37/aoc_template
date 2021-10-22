@@ -7,6 +7,7 @@
 1. Make a copy of days/template.rs, name it days/dayX.rs, and run a find/replace inside it to replace `NUM` with X.
 0. Add it to days/mod.rs.
 0. Add a call to run your new day by adding `day!(X);` to the bottom of main.
+0. Use https://github.com/gobanos/cargo-aoc to download the input.
 
 ## Features:
 * Once a solution to a part is known, it can be added like so: `day!(X, part1_answer, part2_answer)`. This will verify that your code continues to return the correct values.
