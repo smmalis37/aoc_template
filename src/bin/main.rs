@@ -3,13 +3,6 @@ use std::{cmp::PartialEq, fmt::Debug, time::Instant};
 
 const YEAR: &str = "_template";
 
-fn main() {
-    #[cfg(debug_assertions)]
-    let _dhat = dhat::Dhat::start_heap_profiling();
-
-    println!("AOC {}", YEAR);
-}
-
 #[cfg(debug_assertions)]
 #[global_allocator]
 static ALLOCATOR: dhat::DhatAlloc = dhat::DhatAlloc;
@@ -32,6 +25,13 @@ macro_rules! day {
             solve::<_, [<day $d>]::[<Day $d>]>($d, $o1, $o2);
         }
     };
+}
+
+fn main() {
+    #[cfg(debug_assertions)]
+    let _dhat = dhat::Dhat::start_heap_profiling();
+
+    println!("AOC {}", YEAR);
 }
 
 fn solve<O, S: for<'a> DaySolver<'a, Output = O>>(
