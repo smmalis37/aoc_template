@@ -1,7 +1,7 @@
 #[allow(dead_code)]
-pub type HashMap<K, V> = ahash::AHashMap<K, V>;
+pub type HashMap<K, V> = rustc_hash::FxHashMap<K, V>;
 #[allow(dead_code)]
-pub type HashSet<K, V> = ahash::AHashSet<K, V>;
+pub type HashSet<V> = rustc_hash::FxHashSet<V>;
 
 pub trait BStrParse {
     fn parse<F: lexical::FromLexical>(&self) -> Result<F, lexical::Error>;
