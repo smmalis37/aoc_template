@@ -2,11 +2,11 @@ use crate::{day_solver::DaySolver, util::*};
 
 pub struct DayNUM;
 
-impl DaySolver<'_> for DayNUM {
+impl<'a> DaySolver<'a> for DayNUM {
     type Parsed = u32;
     type Output = u32;
 
-    fn parse(input: &str) -> Self::Parsed {
+    fn parse(input: &'a str) -> Self::Parsed {
         todo!()
     }
 
