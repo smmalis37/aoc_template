@@ -1,4 +1,4 @@
-#![feature(type_alias_impl_trait)]
+#![feature(type_alias_impl_trait, associated_type_defaults)]
 #![warn(clippy::all, clippy::pedantic, clippy::nursery)]
 #![allow(clippy::wildcard_imports, clippy::default_trait_access)]
 
