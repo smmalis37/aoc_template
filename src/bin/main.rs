@@ -1,5 +1,5 @@
 use aoc_template::{day_solver::DaySolver, days::*};
-use std::{cmp::PartialEq, fmt::Debug, time::Instant};
+use std::{fmt::Debug, time::Instant};
 
 const YEAR: &str = "_template";
 

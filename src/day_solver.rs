@@ -1,4 +1,4 @@
-use std::{cmp::PartialEq, fmt::Debug};
+use std::fmt::Debug;
 
 pub trait DaySolver<'a> {
     type Parsed: Clone;
