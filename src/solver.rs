@@ -1,6 +1,6 @@
 use std::fmt::Debug;
 
-pub trait DaySolver<'a> {
+pub trait Solver<'a> {
     type Parsed: Clone;
     type Output: Debug + PartialEq;
     type Output2: Debug + PartialEq = Self::Output;

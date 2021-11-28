@@ -1,8 +1,8 @@
-use crate::{day_solver::DaySolver, util::*};
+use crate::{solver::Solver, util::*};
 
 pub struct DayNUM;
 
-impl<'a> DaySolver<'a> for DayNUM {
+impl<'a> Solver<'a> for DayNUM {
     type Parsed = u32;
     type Output = u32;
 

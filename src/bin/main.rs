@@ -1,4 +1,4 @@
-use aoc_template::{day_solver::DaySolver, days::*};
+use aoc_template::{solver::Solver, days::*};
 use std::{fmt::Debug, time::Instant};
 
 const YEAR: &str = "_template";
@@ -34,7 +34,7 @@ fn main() {
     println!("AOC {}", YEAR);
 }
 
-fn solve<O, O2, S: for<'a> DaySolver<'a, Output = O, Output2 = O2>>(
+fn solve<O, O2, S: for<'a> Solver<'a, Output = O, Output2 = O2>>(
     day_number: u8,
     part1_output: Option<O>,
     part2_output: Option<O2>,
@@ -53,7 +53,7 @@ fn solve<O, O2, S: for<'a> DaySolver<'a, Output = O, Output2 = O2>>(
     }
 }
 
-fn run<'a, S: DaySolver<'a>>(
+fn run<'a, S: Solver<'a>>(
     day_number: u8,
     input: &'a str,
     part1_output: Option<S::Output>,
@@ -92,7 +92,7 @@ fn run_part<P, O: Debug + PartialEq>(
     }
 }
 
-fn bench<'a, S: DaySolver<'a>>(day_number: u8, input: &'a str) {
+fn bench<'a, S: Solver<'a>>(day_number: u8, input: &'a str) {
     let mut criterion = criterion::Criterion::default().without_plots();
     let mut group = criterion.benchmark_group(format!("Day {}", day_number));
 

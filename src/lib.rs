@@ -2,6 +2,6 @@
 #![warn(clippy::all, clippy::pedantic, clippy::nursery)]
 #![allow(clippy::wildcard_imports, clippy::default_trait_access)]
 
-pub mod day_solver;
+pub mod solver;
 pub mod days;
 pub(crate) mod util;
