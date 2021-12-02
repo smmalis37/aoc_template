@@ -1,4 +1,4 @@
-use aoc_template::{solver::Solver, days::*};
+use aoc_template::{days::*, solver::Solver};
 use std::{fmt::Debug, time::Instant};
 
 const YEAR: &str = "_template";
